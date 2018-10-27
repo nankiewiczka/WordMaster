@@ -1,0 +1,33 @@
+package main.java;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import main.java.model.DataCSVProvider;
+import main.java.model.Word;
+
+public class Main extends Application {
+
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("../resources/sample/startWindow.fxml"));
+        primaryStage.setTitle("Word Master");
+        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.show();
+
+        //TODO tylko do testów odczytu
+        for(Word w : new DataCSVProvider("data.csv").getData()) {
+            System.out.println(w.getForeignWord() + "   " + w.getPolishWord());
+        }
+    }
+
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+
+
+}
