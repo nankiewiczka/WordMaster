@@ -1,6 +1,7 @@
 package project.data;
 
 public class DataCSVLineValidator implements DataLineValidator {
+
     public boolean validLine(String line) {
         if(line.isEmpty())
             return false;
