@@ -18,7 +18,7 @@ public class Main extends Application {
         primaryStage.show();
 
         //TODO tylko do testów odczytu
-        for(Word w : new DataCSVProvider("data.csv").getData()) {
+        for(Word w : new DataCSVProvider("data.csv").getData().getWordsList()) {
             System.out.println(w.getForeignWord() + "   " + w.getPolishWord());
         }
     }

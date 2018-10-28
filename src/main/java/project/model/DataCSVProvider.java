@@ -14,19 +14,19 @@ public class DataCSVProvider implements DataProvider {
     }
 
     @Override
-    public List<Word> getData() {
-        List<Word> wordsList = new ArrayList<>();
+    public WordList getData() {
+        WordList wordList = new WordList();
         DataLineValidator validator = new DataCSVLineValidator();
         try {
             Files.lines(Paths.get(fileName)).forEach(s -> {
             if(validator.validLine(s)) {
                 String [] arr = s.split(",");
-                wordsList.add(new Word(arr[0], arr[1]));
+                wordList.addWord(new Word(arr[0], arr[1]));
             }
             });
         }catch(IOException e) {
             e.printStackTrace();
         }
-        return wordsList;
+        return wordList;
     }
 }
