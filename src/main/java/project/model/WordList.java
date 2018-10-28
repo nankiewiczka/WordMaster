@@ -17,4 +17,9 @@ public class WordList {
     public List<Word> getWordsList() {
         return wordsList;
     }
+
+    public int getAmount() {
+        return this.wordsList.size();
+    }
+
 }

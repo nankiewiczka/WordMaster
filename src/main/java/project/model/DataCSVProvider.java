@@ -15,6 +15,7 @@ public class DataCSVProvider implements DataProvider {
 
     @Override
     public WordList getData() {
+        //TODO dodć trim() i to Uppercase
         WordList wordList = new WordList();
         DataLineValidator validator = new DataCSVLineValidator();
         try {
