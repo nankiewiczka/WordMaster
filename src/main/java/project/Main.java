@@ -1,12 +1,12 @@
-package main.java;
+package project;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import main.java.model.DataCSVProvider;
-import main.java.model.Word;
+import project.model.DataCSVProvider;
+import project.model.Word;
 
 public class Main extends Application {
 

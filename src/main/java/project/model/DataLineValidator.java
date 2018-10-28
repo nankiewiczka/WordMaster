@@ -1,4 +1,4 @@
-package main.java.model;
+package project.model;
 
 public interface DataLineValidator {
     boolean validLine(String line);

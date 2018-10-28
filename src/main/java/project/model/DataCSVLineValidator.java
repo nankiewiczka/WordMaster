@@ -1,4 +1,4 @@
-package main.java.model;
+package project.model;
 
 public class DataCSVLineValidator implements DataLineValidator {
     public boolean validLine(String line) {

@@ -1,4 +1,4 @@
-package main.java.model;
+package project.model;
 
 import java.io.IOException;
 import java.nio.file.Files;
