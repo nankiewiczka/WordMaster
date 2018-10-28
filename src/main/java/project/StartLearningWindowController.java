@@ -20,6 +20,7 @@ public class StartLearningWindowController {
     @FXML
     public void startLearning() {
         listNameContent.textProperty().setValue("Ustawiamy");
+        //TODO wywołanie zmiany okna i controller
     }
 
 }
