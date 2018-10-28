@@ -4,13 +4,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-public class StartWindowController {
-
+public class StartLearningWindowController {
     @FXML
     private Button startButton;
-
-    @FXML
-    private Label listNameContent;
 
     @FXML
     private Button endButton;
@@ -19,9 +15,11 @@ public class StartWindowController {
     private Label wordAmountContent;
 
     @FXML
-    public void startLearning() {
-        listNameContent.textProperty().setValue("hejka");
-    }
+    private Label listNameContent;
 
+    @FXML
+    public void startLearning() {
+        listNameContent.textProperty().setValue("Ustawiamy");
+    }
 
 }

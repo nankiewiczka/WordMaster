@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="project.StartLearningWindowController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <children>
+        <Button fx:id="startButton" layoutX="148.0" layoutY="277.0" mnemonicParsing="false" onAction="#startLearning" text="Start" />
+        <Button fx:id="endButton" layoutX="353.0" layoutY="277.0" mnemonicParsing="false" text="End" />
+        <ChoiceBox fx:id="selectLanguage" layoutX="210.0" layoutY="200.0" prefWidth="150.0" />
+        <Label fx:id="wordAmountContent" layoutX="192.0" layoutY="151.0" text="Label" />
+        <Label fx:id="listNameContent" layoutX="192.0" layoutY="110.0" text="Label" />
+    </children>
+</AnchorPane>
