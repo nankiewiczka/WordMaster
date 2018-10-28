@@ -5,8 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import project.model.DataCSVProvider;
-import project.model.Word;
 
 public class Main extends Application {
 

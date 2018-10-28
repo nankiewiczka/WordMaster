@@ -1,10 +1,11 @@
-package project.model;
+package project.data;
+
+import project.model.Word;
+import project.model.WordList;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.List;
-import java.util.ArrayList;
 
 public class DataCSVProvider implements DataProvider {
     private String fileName;
