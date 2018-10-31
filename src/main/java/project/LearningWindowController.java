@@ -9,6 +9,7 @@ import project.model.LearningRate;
 import project.model.LearningUnit;
 import project.model.Word;
 
+
 public class LearningWindowController {
 //TODO przekazywany chyba w konstruktorze potem poprawić
     private LearningUnit learningUnit = new LearningUnit(new DataCSVProvider("data.csv").getData());
