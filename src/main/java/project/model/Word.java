@@ -16,4 +16,6 @@ public class Word {
     public String getForeignWord() {
         return foreignWord;
     }
+
+
 }
