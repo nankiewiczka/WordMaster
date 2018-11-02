@@ -28,7 +28,9 @@
          <font>
             <Font size="24.0" />
          </font></Label>
+
       <TextField fx:id="inputWord" layoutX="76.0" layoutY="153.0" style="-fx-background-color: #cce6ff;">
+
          <font>
             <Font size="14.0" />
          </font></TextField>
