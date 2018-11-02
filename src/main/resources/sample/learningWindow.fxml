@@ -6,33 +6,44 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #80bfff;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.LearningWindowController">
+<AnchorPane prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #80bfff;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controller.LearningWindowController">
    <children>
-      <Button fx:id="okButton" layoutX="107.0" layoutY="213.0" mnemonicParsing="false" onAction="#confirmWord" style="-fx-background-color: #cce6ff;" text="Ok">
+      <Button fx:id="okButton" layoutX="48.0" layoutY="213.0" mnemonicParsing="false" onAction="#confirmWord" prefHeight="28.0" prefWidth="84.0" style="-fx-background-color: #cce6ff;" text="Ok">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
-      <Button fx:id="nextButton" layoutX="191.0" layoutY="213.0" mnemonicParsing="false" onAction="#switchNextWord" style="-fx-background-color: #cce6ff;" text="Next">
+      <Button fx:id="nextButton" layoutX="149.0" layoutY="213.0" mnemonicParsing="false" onAction="#switchNextWord" prefHeight="28.0" prefWidth="84.0" style="-fx-background-color: #cce6ff;" text="Next">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
-      <Button fx:id="endButton" layoutX="311.0" layoutY="153.0" mnemonicParsing="false" onAction="#quitLearning" style="-fx-background-color: #cce6ff;" text="Quit">
+      <Button fx:id="endButton" layoutX="270.0" layoutY="153.0" mnemonicParsing="false" onAction="#quitLearning" prefHeight="28.0" prefWidth="84.0" style="-fx-background-color: #cce6ff;" text="Quit">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
-      <Label fx:id="progressLabel" layoutX="288.0" layoutY="71.0" text="Label" textAlignment="CENTER">
+      <Label fx:id="correct" layoutX="311.0" layoutY="73.0" text="Label" textAlignment="CENTER">
          <font>
-            <Font size="18.0" />
+            <Font size="14.0" />
          </font></Label>
-      <Label fx:id="wordToGuess" layoutX="126.0" layoutY="100.0" text="Label">
+      <Label fx:id="wordToGuess" layoutX="95.0" layoutY="100.0" text="Label">
          <font>
-            <Font size="24.0" />
+            <Font name="Droid Sans" size="24.0" />
          </font></Label>
 
-      <TextField fx:id="inputWord" layoutX="76.0" layoutY="153.0" style="-fx-background-color: #cce6ff;">
+      <TextField fx:id="inputWord" layoutX="48.0" layoutY="153.0" style="-fx-background-color: #cce6ff;">
 
          <font>
             <Font size="14.0" />
          </font></TextField>
+      <Label fx:id="remain" layoutX="312.0" layoutY="107.0" text="Label" />
+      <Label fx:id="correctTitle" layoutX="252.0" layoutY="74.0" text="Label">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="remainTitle" layoutX="252.0" layoutY="107.0" text="Label">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
