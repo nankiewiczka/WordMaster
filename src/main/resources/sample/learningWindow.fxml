@@ -4,16 +4,33 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.LearningWindowController">
+<AnchorPane prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #80bfff;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.LearningWindowController">
    <children>
-      <Button fx:id="okButton" layoutX="88.0" layoutY="274.0" mnemonicParsing="false" onAction="#confirmWord" text="OK" />
-      <Button fx:id="nextButton" layoutX="189.0" layoutY="274.0" mnemonicParsing="false" onAction="#switchNextWord" text="NEXT" />
-      <Button fx:id="endButton" layoutX="392.0" layoutY="200.0" mnemonicParsing="false" onAction="#quitLearning" text="END" />
-      <Label fx:id="progressLabel" layoutX="387.0" layoutY="111.0" text="Label" />
-      <Label fx:id="pointLabel" layoutX="387.0" layoutY="150.0" text="Label" />
-      <Label fx:id="wordToGuess" layoutX="132.0" layoutY="127.0" text="Label" />
-      <TextField fx:id="inputWord" layoutX="95.0" layoutY="200.0" />
+      <Button fx:id="okButton" layoutX="107.0" layoutY="213.0" mnemonicParsing="false" onAction="#confirmWord" style="-fx-background-color: #cce6ff;" text="OK">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="nextButton" layoutX="191.0" layoutY="213.0" mnemonicParsing="false" onAction="#switchNextWord" style="-fx-background-color: #cce6ff;" text="NEXT">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="endButton" layoutX="311.0" layoutY="153.0" mnemonicParsing="false" onAction="#quitLearning" style="-fx-background-color: #cce6ff;" text="END">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Label fx:id="progressLabel" layoutX="288.0" layoutY="71.0" text="Label" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="wordToGuess" layoutX="126.0" layoutY="100.0" text="Label">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <TextField fx:id="inputWord" layoutX="76.0" layoutY="153.0" style="-fx-background-color: #cce6ff;">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
    </children>
 </AnchorPane>
