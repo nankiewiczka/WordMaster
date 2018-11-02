@@ -12,7 +12,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("/sample/learningWindow.fxml"));
         primaryStage.setTitle("Word Master");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root));
+        primaryStage.setResizable(false);
         primaryStage.show();
         //TODO tylko do testów odczytu
 //        for(Word w : new DataCSVProvider("data.csv").getData().getWordsList()) {
