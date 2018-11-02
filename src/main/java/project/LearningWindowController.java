@@ -16,7 +16,7 @@ public class LearningWindowController {
     public void setLearningMode(String mode) {
         learningMode = mode;
     }
-    //TODO przekazywany chyba w konstruktorze potem poprawić
+
     private LearningUnit learningUnit = new LearningUnit(new DataCSVProvider("data.csv").getData());
     LearningRate learningRate = new LearningRate(learningUnit.getWordsAmount());
 

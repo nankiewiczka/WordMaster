@@ -9,11 +9,11 @@
 <AnchorPane prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #80bfff;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.StartLearningWindowController">
 
     <children>
-        <Button fx:id="startButton" layoutX="232.0" layoutY="159.0" mnemonicParsing="false" onAction="#startLearning" prefHeight="28.0" prefWidth="142.0" style="-fx-background-color: #cce6ff;" text="Rozpocznij test">
+        <Button fx:id="startButton" layoutX="232.0" layoutY="159.0" mnemonicParsing="false" onAction="#startLearning" prefHeight="28.0" prefWidth="142.0" style="-fx-background-color: #cce6ff;" text="Start test">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
-        <Button fx:id="endButton" layoutX="234.0" layoutY="212.0" mnemonicParsing="false" onAction="#endTest" prefHeight="28.0" prefWidth="142.0" style="-fx-background-color: #cce6ff;" text="Zakończ">
+        <Button fx:id="endButton" layoutX="234.0" layoutY="212.0" mnemonicParsing="false" onAction="#endTest" prefHeight="28.0" prefWidth="142.0" style="-fx-background-color: #cce6ff;" text="Quit">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>

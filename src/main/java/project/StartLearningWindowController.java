@@ -32,14 +32,14 @@ public class StartLearningWindowController {
     @FXML
     private ChoiceBox selectLanguage;
 
-    private ObservableList<String> options = FXCollections.observableArrayList("polski-obcy", "obcy-polski");
+    private ObservableList<String> options = FXCollections.observableArrayList("polish-foreign", "foreign-polish");
 
     @FXML
     private void initialize() {
-        selectLanguage.setValue("polski-obcy");
+        selectLanguage.setValue("polish-foreign");
         selectLanguage.setItems(options);
-        titleLabel.textProperty().setValue("Zaimportowano plik:");
-        amountLabel.textProperty().setValue("Liczba zaimportowanych słów:");
+        titleLabel.textProperty().setValue("Imported file:");
+        amountLabel.textProperty().setValue("Number of imported words:");
 
     }
     @FXML

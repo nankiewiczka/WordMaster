@@ -8,15 +8,15 @@
 
 <AnchorPane prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #80bfff;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.LearningWindowController">
    <children>
-      <Button fx:id="okButton" layoutX="107.0" layoutY="213.0" mnemonicParsing="false" onAction="#confirmWord" style="-fx-background-color: #cce6ff;" text="OK">
+      <Button fx:id="okButton" layoutX="107.0" layoutY="213.0" mnemonicParsing="false" onAction="#confirmWord" style="-fx-background-color: #cce6ff;" text="Ok">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
-      <Button fx:id="nextButton" layoutX="191.0" layoutY="213.0" mnemonicParsing="false" onAction="#switchNextWord" style="-fx-background-color: #cce6ff;" text="NEXT">
+      <Button fx:id="nextButton" layoutX="191.0" layoutY="213.0" mnemonicParsing="false" onAction="#switchNextWord" style="-fx-background-color: #cce6ff;" text="Next">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
-      <Button fx:id="endButton" layoutX="311.0" layoutY="153.0" mnemonicParsing="false" onAction="#quitLearning" style="-fx-background-color: #cce6ff;" text="END">
+      <Button fx:id="endButton" layoutX="311.0" layoutY="153.0" mnemonicParsing="false" onAction="#quitLearning" style="-fx-background-color: #cce6ff;" text="Quit">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
