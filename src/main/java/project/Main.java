@@ -8,9 +8,11 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    private static Stage window;
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/sample/startLearningWindow.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/selectListWindow.fxml"));
+        window=primaryStage;
         primaryStage.setTitle("Word Master");
         primaryStage.setScene(new Scene(root));
         primaryStage.setResizable(false);
@@ -19,6 +21,10 @@ public class Main extends Application {
 //        for(Word w : new DataCSVProvider("data.csv").getData().getWordsList()) {
 //            System.out.println(w.getForeignWord() + "   " + w.getPolishWord());
 //        }
+    }
+
+    public static Stage getMainStage() {
+        return window;
     }
 
 

@@ -11,7 +11,12 @@ import project.model.Word;
 
 
 public class LearningWindowController {
-//TODO przekazywany chyba w konstruktorze potem poprawić
+    private String learningMode;
+
+    public void setLearningMode(String mode) {
+        learningMode = mode;
+    }
+    //TODO przekazywany chyba w konstruktorze potem poprawić
     private LearningUnit learningUnit = new LearningUnit(new DataCSVProvider("data.csv").getData());
     LearningRate learningRate = new LearningRate(learningUnit.getWordsAmount());
 
@@ -28,14 +33,15 @@ public class LearningWindowController {
     @FXML
     private Label progressLabel;
 
-    @FXML
-    private Label pointLabel;
 
     @FXML
     private Label wordToGuess;
 
     @FXML
     private TextField inputWord;
+
+    public LearningWindowController() {
+    }
 
     @FXML
     public void confirmWord() {
