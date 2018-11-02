@@ -13,7 +13,7 @@ public class LearningWindowController {
 
     public void initialize() {
         correctTitle.textProperty().setValue("Correct:");
-        remainTitle.textProperty().setValue("Remain:");
+        remainTitle.textProperty().setValue("Progress:");
         correct.textProperty().setValue("0");
     }
 
