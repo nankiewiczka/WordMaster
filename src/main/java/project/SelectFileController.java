@@ -8,10 +8,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-
 import java.io.File;
 
-public class Controller {
+public class SelectFileController {
 
     @FXML
     public Button chooseListBtn;
@@ -26,16 +25,13 @@ public class Controller {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/sample/startLearningWindow.fxml"));
             Parent root = fxmlLoader.load();
             StartLearningWindowController controller = fxmlLoader.getController();
-            controller.setFileName(selectedFile.getAbsolutePath());
+            controller.setImportedFileName(selectedFile.getAbsolutePath());
             Stage stage = Main.getMainStage();
             stage.setScene(new Scene(root));
             stage.show();
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-        }
-        else {
-//            actionStatus.setText("File selection cancelled.");
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 }

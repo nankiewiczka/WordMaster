@@ -11,7 +11,7 @@ public class Main extends Application {
     private static Stage window;
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/sample/selectListWindow.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/selectFileWindow.fxml"));
         window=primaryStage;
         primaryStage.setTitle("Word Master");
         primaryStage.setScene(new Scene(root));
