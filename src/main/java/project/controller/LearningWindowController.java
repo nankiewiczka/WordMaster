@@ -37,13 +37,25 @@ public class LearningWindowController {
 
     @FXML
     public void confirmWord() {
-        //TODO powinno działać też dla enter
-        // sprawdzanie poprawności / dodać efekt czerwone/zielone
-        //punkty
+        if(learningEntity.checkCorrectness(inputWord.getPromptText())) {
+            learningRate.increasePoints();
+            changeCorrect(Integer.toString(learningRate.getScore()));
+            changeRemain(Integer.toString(learningEntity.getRemainAmount()));
+        }
+        else {
+           // nic
+        }
     }
 
     @FXML
     public void switchNextWord() {
+        String wordForLabel = learningEntity.getWordForLabel();
+        if(wordForLabel != null) {
+            changeWordForGuess(wordForLabel);
+        }
+        else{
+            //mesagebox
+        }
 
     }
 
@@ -65,4 +77,18 @@ public class LearningWindowController {
     public void setRemain(String remainAmount) {
         remain.textProperty().setValue(remainAmount);
     }
+
+    private void changeWordForGuess(String wordForGuess) {
+        wordToGuess.textProperty().setValue(wordForGuess);
+    }
+
+    private void changeCorrect(String c) {
+        correct.textProperty().setValue(c);
+    }
+
+    private void changeRemain(String r) {
+        remain.textProperty().setValue(r);
+    }
+
+
 }

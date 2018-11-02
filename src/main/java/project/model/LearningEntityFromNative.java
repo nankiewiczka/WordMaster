@@ -25,4 +25,9 @@ public class LearningEntityFromNative extends LearningEntity {
     public int getWordAmount() {
         return learningUnit.getWordsAmount();
     }
+
+    @Override
+    public int getRemainAmount() {
+        return learningUnit.getRemainsAmount();
+    }
 }

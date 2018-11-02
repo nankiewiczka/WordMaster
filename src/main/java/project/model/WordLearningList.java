@@ -27,4 +27,8 @@ public class WordLearningList {
         return wordAmount;
     }
 
+    public int remainsAmount() {
+        return wordIndex + 1;
+    }
+
 }

@@ -21,4 +21,8 @@ public class LearningUnit {
     public int getWordsAmount() {
         return wordsAmount;
     }
+
+    public int getRemainsAmount() {
+        return wordLearningList.remainsAmount();
+    }
 }
