@@ -52,6 +52,7 @@ public class StartLearningWindowController {
             LearningEntity learningEntity = getLearningEntity();
             controller.setLearningEntity(learningEntity);
             controller.setWordToGuess(learningEntity.getWordForLabel());
+            controller.setRemain(Integer.toString(learningEntity.getWordAmount()));
             Stage stage = Main.getMainStage();
             stage.setScene(new Scene(root));
             stage.show();

@@ -15,6 +15,7 @@ public class LearningWindowController {
     public void initialize() {
         correctTitle.textProperty().setValue("Correct:");
         remainTitle.textProperty().setValue("Remain:");
+        correct.textProperty().setValue("0");
     }
 
     @FXML
@@ -59,5 +60,9 @@ public class LearningWindowController {
 
     public void setWordToGuess(String word) {
         wordToGuess.textProperty().setValue(word);
+    }
+
+    public void setRemain(String remainAmount) {
+        remain.textProperty().setValue(remainAmount);
     }
 }

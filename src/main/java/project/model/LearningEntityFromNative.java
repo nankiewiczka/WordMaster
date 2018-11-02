@@ -20,4 +20,9 @@ public class LearningEntityFromNative extends LearningEntity {
     public boolean checkCorrectness(String input) {
         return wordForeignChecker.checkCorrectness(word, input);
     }
+
+    @Override
+    public int getWordAmount() {
+        return learningUnit.getWordsAmount();
+    }
 }
