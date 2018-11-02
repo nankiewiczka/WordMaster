@@ -53,7 +53,7 @@ public class LearningWindowController {
             changeWordForGuess(wordForLabel);
         }
         else{
-            //mesagebox
+            correct.textProperty().setValue("KONIEC");
         }
 
     }

@@ -1,5 +1,7 @@
 package project.model;
 
+import java.util.Optional;
+
 public class LearningEntityFromNative extends LearningEntity {
     private LearningUnit learningUnit;
     private WordForeignChecker wordForeignChecker;
@@ -12,8 +14,13 @@ public class LearningEntityFromNative extends LearningEntity {
 
     @Override
     public String getWordForLabel() {
-        word = learningUnit.getNextWord().get();
-        return word.getPolishWord();
+        Optional<Word> optionalWord = learningUnit.getNextWord();
+        if(optionalWord.isPresent()) {
+            word = optionalWord.get();
+            return word.getPolishWord();
+        }
+        else return null;
+
     }
 
     @Override
