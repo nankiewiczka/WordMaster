@@ -45,21 +45,7 @@ public class StartLearningWindowController {
 
     @FXML
     public void startLearning() {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/sample/learningWindow.fxml"));
-            Parent root = fxmlLoader.load();
-            LearningWindowController controller = fxmlLoader.getController();
-            LearningEntity learningEntity = getLearningEntity();
-            controller.setLearningEntity(learningEntity);
-            controller.setWordToGuess(learningEntity.getWordForLabel());
-            controller.setLearningRate(learningEntity.getWordAmount());
-            controller.setRemain("0/"+Integer.toString(learningEntity.getWordAmount()));
-            Stage stage = Main.getMainStage();
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
+        Controller.showLearningWindow(getLearningEntity());
     }
 
     private LearningEntity getLearningEntity() {

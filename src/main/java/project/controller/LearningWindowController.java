@@ -1,23 +1,17 @@
 package project.controller;
 
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import project.Main;
 import project.model.*;
 
 import java.util.Optional;
 
 
 public class LearningWindowController {
+
     private LearningEntity learningEntity;
     private LearningRate learningRate;
-
-
-    public void initialize() {
-        correctTitle.textProperty().setValue("Correct:");
-        remainTitle.textProperty().setValue("Progress:");
-        correct.textProperty().setValue("0");
-    }
 
     @FXML
     private Label correctTitle;
@@ -30,11 +24,18 @@ public class LearningWindowController {
 
     @FXML
     private Label remain;
+
     @FXML
     private Label wordToGuess;
 
     @FXML
     private TextField inputWord;
+
+    public void initialize() {
+        correctTitle.textProperty().setValue("Correct:");
+        remainTitle.textProperty().setValue("Progress:");
+        correct.textProperty().setValue("0");
+    }
 
     @FXML
     public void confirmWord() {
@@ -42,9 +43,6 @@ public class LearningWindowController {
             learningRate.increasePoints();
             changeCorrect(Integer.toString(learningRate.getScore()));
             changeRemain(Integer.toString(learningEntity.getRemainAmount()));
-        }
-        else {
-           // nic
         }
     }
 
@@ -54,32 +52,33 @@ public class LearningWindowController {
         if(wordForLabel != null) {
             changeWordForGuess(wordForLabel);
         }
-        else{
-            correct.textProperty().setValue("KONIEC");
+        else {
+            quitLearning();
         }
 
     }
 
     @FXML
     public void quitLearning() {
+        showInfoBox();
+    }
+
+    private void showInfoBox() {
         Alert alert = new Alert(Alert.AlertType.NONE, "", ButtonType.OK, ButtonType.CLOSE);
-        alert.setTitle("Quit");
+        alert.setTitle("Test finished");
         alert.setHeaderText("You finished test.");
         alert.setContentText("You score is: " + learningRate.getScore() + "/"
                 + learningRate.getAvailablePoints() + "." + "\n Do you want to try again?");
-
         Optional<ButtonType> result = alert.showAndWait();
-        if (result.get() == ButtonType.OK){
-            //wywołac okno
-        } else {
-            //wywołać okno
+
+        if (result.get() == ButtonType.OK) {
+            Controller.showStartLearningWindowWhenPresentLearningUnit(learningEntity.getLearningUnit());
         }
-
-
+        else {
+            Controller.showSelectFileWindow(Main.getMainStage());
+        }
     }
 
-
-//TODO zrobić oddzielną funkcje dla messageBox, bo 2 razy go będę wywoływać
     public void setLearningEntity(LearningEntity learningEntity) {
         this.learningEntity = learningEntity;
     }

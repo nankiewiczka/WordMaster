@@ -40,6 +40,7 @@ public class LearningEntityFromNative extends LearningEntity {
         return wordLearningList.remainsAmount();
     }
 
+    @Override
     public LearningUnit getLearningUnit() {
         return learningUnit;
     }
