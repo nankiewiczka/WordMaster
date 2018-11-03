@@ -1,28 +1,23 @@
 package project.model;
 
-import java.util.Optional;
-
 public class LearningUnit {
-    private WordLearningList wordLearningList;
-    private final int wordsAmount;
+    private WordList wordList;
+    private String fileName;
 
-    public LearningUnit(WordList wordList) {
-        this.wordLearningList = new WordLearningList(wordList.getWordsList());
-        this.wordsAmount = wordLearningList.getWordAmount();
+    public LearningUnit(WordList wordList, String fileName) {
+        this.wordList = wordList;
+        this.fileName = fileName;
     }
 
-    public Optional<Word> getNextWord() {
-        if(wordLearningList.hasNext())
-            return Optional.of(wordLearningList.getNextWord());
-        else
-            return Optional.empty();
+    public WordList getWordList() {
+        return wordList;
     }
 
     public int getWordsAmount() {
-        return wordsAmount;
+        return wordList.getAmount();
     }
 
-    public int getRemainsAmount() {
-        return wordLearningList.remainsAmount();
+    public String getFileName() {
+        return fileName;
     }
 }

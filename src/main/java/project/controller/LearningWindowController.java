@@ -1,9 +1,11 @@
 package project.controller;
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import project.model.*;
+
+import java.util.Optional;
 
 
 public class LearningWindowController {
@@ -60,13 +62,30 @@ public class LearningWindowController {
 
     @FXML
     public void quitLearning() {
-        //TODO wyswietlenie wyniku, przekierowanie do startLearningWindow
+        Alert alert = new Alert(Alert.AlertType.NONE, "", ButtonType.OK, ButtonType.CLOSE);
+        alert.setTitle("Quit");
+        alert.setHeaderText("You finished test.");
+        alert.setContentText("You score is: " + learningRate.getScore() + "/"
+                + learningRate.getAvailablePoints() + "." + "\n Do you want to try again?");
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK){
+            //wywołac okno
+        } else {
+            //wywołać okno
+        }
+
+
     }
 
 
 //TODO zrobić oddzielną funkcje dla messageBox, bo 2 razy go będę wywoływać
     public void setLearningEntity(LearningEntity learningEntity) {
         this.learningEntity = learningEntity;
+    }
+
+    public void setLearningRate(int availablePoints) {
+        this.learningRate = new LearningRate(availablePoints);
     }
 
     public void setWordToGuess(String word) {

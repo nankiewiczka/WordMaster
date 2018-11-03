@@ -1,4 +1,6 @@
-package project.model;
+package project.checking;
+
+import project.model.Word;
 
 public class WordForeignChecker implements WordChecker {
 

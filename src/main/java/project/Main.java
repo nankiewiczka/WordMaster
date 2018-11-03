@@ -14,6 +14,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/sample/selectFileWindow.fxml"));
         window=primaryStage;
         primaryStage.setTitle("Word Master");
+
         primaryStage.setScene(new Scene(root));
         primaryStage.setResizable(false);
         primaryStage.show();

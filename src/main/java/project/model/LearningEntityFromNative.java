@@ -1,22 +1,24 @@
 package project.model;
 
-import java.util.Optional;
+import project.checking.WordForeignChecker;
 
 public class LearningEntityFromNative extends LearningEntity {
     private LearningUnit learningUnit;
+    private WordLearningList wordLearningList;
     private WordForeignChecker wordForeignChecker;
     private Word word;
 
     public LearningEntityFromNative(LearningUnit learningUnit) {
         this.learningUnit = learningUnit;
+        this.wordLearningList = new WordLearningList(learningUnit.getWordList().getWordsList());
         wordForeignChecker = new WordForeignChecker();
     }
 
     @Override
     public String getWordForLabel() {
-        Optional<Word> optionalWord = learningUnit.getNextWord();
-        if(optionalWord.isPresent()) {
-            word = optionalWord.get();
+        Word optionalWord = wordLearningList.getNextWord();
+        if(optionalWord != null) {
+            word = optionalWord;
             return word.getPolishWord();
         }
         else return null;
@@ -35,6 +37,10 @@ public class LearningEntityFromNative extends LearningEntity {
 
     @Override
     public int getRemainAmount() {
-        return learningUnit.getRemainsAmount();
+        return wordLearningList.remainsAmount();
+    }
+
+    public LearningUnit getLearningUnit() {
+        return learningUnit;
     }
 }

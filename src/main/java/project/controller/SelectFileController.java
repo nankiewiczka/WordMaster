@@ -29,8 +29,8 @@ public class SelectFileController {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/sample/startLearningWindow.fxml"));
             Parent root = fxmlLoader.load();
             StartLearningWindowController controller = fxmlLoader.getController();
-            controller.setImportedFileName(selectedFile.getAbsolutePath());
-            LearningUnit learningUnit = new LearningUnit(new DataCSVProvider(selectedFile.getAbsolutePath().toString()).getData());
+            LearningUnit learningUnit = new LearningUnit(new DataCSVProvider(selectedFile.getAbsolutePath()).getData(), selectedFile.getAbsolutePath());
+            controller.setImportedFileName(learningUnit.getFileName());
             controller.setLearningUnit(learningUnit);
             controller.setImportedWordAmount(Integer.toString(learningUnit.getWordsAmount()));
             Stage stage = Main.getMainStage();
