@@ -1,7 +1,7 @@
 package project.model;
 
 import org.junit.jupiter.api.Test;
-import project.checking.WordForeignChecker;
+import project.checker.WordForeignChecker;
 
 import static org.junit.jupiter.api.Assertions.*;
 

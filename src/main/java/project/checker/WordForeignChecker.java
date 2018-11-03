@@ -1,4 +1,4 @@
-package project.checking;
+package project.checker;
 
 import project.model.Word;
 

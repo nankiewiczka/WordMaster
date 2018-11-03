@@ -2,11 +2,11 @@ package project.model;
 
 import java.util.List;
 
-public class WordLearningList {
+public class LearningList {
     private List<Word> wordList;
     private int wordIndex;
 
-    public WordLearningList(List<Word> wordList) {
+    public LearningList(List<Word> wordList) {
         this.wordList = wordList;
         this.wordIndex = wordList.size() -1;
     }

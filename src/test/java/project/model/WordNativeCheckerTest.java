@@ -1,7 +1,7 @@
 package project.model;
 
 import org.junit.jupiter.api.Test;
-import project.checking.WordNativeChecker;
+import project.checker.WordNativeChecker;
 
 import static org.junit.jupiter.api.Assertions.*;
 
