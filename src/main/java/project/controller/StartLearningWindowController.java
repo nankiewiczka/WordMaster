@@ -2,21 +2,18 @@ package project.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
-import javafx.stage.Stage;
 import project.Main;
 import project.model.LearningEntity;
 import project.model.LearningEntityFromNative;
 import project.model.LearningUnit;
 
 public class StartLearningWindowController {
+
     private LearningUnit learningUnit;
+    private ObservableList<String> options = FXCollections.observableArrayList("polish-foreign", "foreign-polish");
 
     @FXML
     private Label importedWordAmount;
@@ -33,8 +30,6 @@ public class StartLearningWindowController {
     @FXML
     private ChoiceBox selectLanguage;
 
-    private ObservableList<String> options = FXCollections.observableArrayList("polish-foreign", "foreign-polish");
-
     @FXML
     private void initialize() {
         selectLanguage.setValue("polish-foreign");
@@ -48,23 +43,16 @@ public class StartLearningWindowController {
         Controller.showLearningWindow(getLearningEntity());
     }
 
+    @FXML
+    public void endLearning() {
+        Controller.showSelectFileWindow(Main.getMainStage());
+    }
+
     private LearningEntity getLearningEntity() {
         if(selectLanguage.getValue().toString().equals("polish-foreign"))
             return new LearningEntityFromNative(learningUnit);
-        else return new LearningEntityFromNative(learningUnit); //TODO poprawić
-    }
-
-    @FXML
-    public void endTest(ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/sample/selectFileWindow.fxml"));
-            Parent root = fxmlLoader.load();
-            Stage stage = Main.getMainStage();
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
+        else
+            return new LearningEntityFromNative(learningUnit); //TODO poprawić
     }
 
     public void setImportedFileName(String fileName) {

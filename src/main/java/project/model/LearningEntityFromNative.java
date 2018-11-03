@@ -15,6 +15,11 @@ public class LearningEntityFromNative extends LearningEntity {
     }
 
     @Override
+    public boolean checkCorrectness(String input) {
+        return wordForeignChecker.checkCorrectness(word, input);
+    }
+
+    @Override
     public String getWordForLabel() {
         Word optionalWord = wordLearningList.getNextWord();
         if(optionalWord != null) {
@@ -23,11 +28,6 @@ public class LearningEntityFromNative extends LearningEntity {
         }
         else return null;
 
-    }
-
-    @Override
-    public boolean checkCorrectness(String input) {
-        return wordForeignChecker.checkCorrectness(word, input);
     }
 
     @Override

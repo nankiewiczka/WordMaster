@@ -4,9 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import project.Main;
 import project.model.*;
-
 import java.util.Optional;
-
 
 public class LearningWindowController {
 
@@ -14,28 +12,22 @@ public class LearningWindowController {
     private LearningRate learningRate;
 
     @FXML
-    private Label correctTitle;
+    private Label titleForCorrectAnswers;
 
     @FXML
-    private Label correct;
+    private Label correctAnswers;
 
     @FXML
-    private Label remainTitle;
+    private Label titleForRemainsWords;
 
     @FXML
-    private Label remain;
+    private Label remainsWordsAmount;
 
     @FXML
     private Label wordToGuess;
 
     @FXML
     private TextField inputWord;
-
-    public void initialize() {
-        correctTitle.textProperty().setValue("Correct:");
-        remainTitle.textProperty().setValue("Progress:");
-        correct.textProperty().setValue("0");
-    }
 
     @FXML
     public void confirmWord() {
@@ -55,7 +47,6 @@ public class LearningWindowController {
         else {
             quitLearning();
         }
-
     }
 
     @FXML
@@ -63,12 +54,19 @@ public class LearningWindowController {
         showInfoBox();
     }
 
+    public void initialize() {
+        titleForCorrectAnswers.textProperty().setValue("Correct:");
+        titleForRemainsWords.textProperty().setValue("Progress:");
+        correctAnswers.textProperty().setValue("0");
+    }
+
     private void showInfoBox() {
         Alert alert = new Alert(Alert.AlertType.NONE, "", ButtonType.OK, ButtonType.CLOSE);
         alert.setTitle("Test finished");
         alert.setHeaderText("You finished test.");
         alert.setContentText("You score is: " + learningRate.getScore() + "/"
-                + learningRate.getAvailablePoints() + "." + "\n Do you want to try again?");
+                + learningRate.getAvailablePoints() + "." +
+                "\n Do you want to try again?");
         Optional<ButtonType> result = alert.showAndWait();
 
         if (result.get() == ButtonType.OK) {
@@ -91,8 +89,8 @@ public class LearningWindowController {
         wordToGuess.textProperty().setValue(word);
     }
 
-    public void setRemain(String remainAmount) {
-        remain.textProperty().setValue(remainAmount);
+    public void setRemainsWordsAmount(String remainAmount) {
+        remainsWordsAmount.textProperty().setValue(remainAmount);
     }
 
     private void changeWordForGuess(String wordForGuess) {
@@ -100,12 +98,11 @@ public class LearningWindowController {
     }
 
     private void changeCorrect(String c) {
-        correct.textProperty().setValue(c);
+        correctAnswers.textProperty().setValue(c);
     }
 
     private void changeRemain(String r) {
-        remain.textProperty().setValue(r);
+        remainsWordsAmount.textProperty().setValue(r);
     }
-
 
 }
