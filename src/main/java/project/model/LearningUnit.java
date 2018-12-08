@@ -9,15 +9,15 @@ public class LearningUnit {
         this.fileName = fileName;
     }
 
-    public WordList getWordList() {
-        return wordList;
-    }
-
     public int getWordsAmount() {
         return wordList.getAmount();
     }
 
     public String getFileName() {
         return fileName;
+    }
+
+    public WordList getWordList() {
+        return this.wordList;
     }
 }

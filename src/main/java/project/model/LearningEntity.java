@@ -4,7 +4,7 @@ import project.checker.WordChecker;
 
 public abstract class LearningEntity {
     protected LearningUnit learningUnit;
-    protected LearningList wordLearningList;
+    protected LearningList learningList;
     protected WordChecker wordChecker;
     protected Word word;
     public abstract String getWordForLabel();
@@ -15,7 +15,7 @@ public abstract class LearningEntity {
         return learningUnit.getWordsAmount();
     }
     public int getRemainAmount() {
-        return wordLearningList.remainsAmount();
+        return learningList.remainsAmount();
     }
     public LearningUnit getLearningUnit() {
         return learningUnit;

@@ -1,24 +1,30 @@
 package project.model;
 
-import java.util.List;
-
 public class LearningList {
-    private List<Word> wordList;
-    private int wordIndex;
+    private WordList wordList;
+    private int index;
 
-    public LearningList(List<Word> wordList) {
+    public LearningList(WordList wordList) {
         this.wordList = wordList;
-        this.wordIndex = wordList.size() -1;
+        this.index = wordList.getAmount();
     }
 
     public Word getNextWord() {
-        Word word = this.wordList.get(wordIndex);
-        wordIndex--;
-        return word;
+        index--;
+        return wordList.getWord(index);
     }
 
     public int remainsAmount() {
-        return wordIndex + 1;
+        return index;
     }
+
+    public void shuffleLearningList() {
+        this.wordList.shuffleWordList();
+    }
+
+    public boolean isNextWord() {
+        return index >= 1;
+    }
+
 
 }
