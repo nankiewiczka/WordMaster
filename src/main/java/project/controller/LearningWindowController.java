@@ -31,17 +31,21 @@ public class LearningWindowController {
     private TextField inputWord;
 
     @FXML
+    private Button okButton;
+
+    @FXML
     public void confirmWord() {
-        if(learningEntity.checkCorrectness(inputWord.getText())) {
+        if(learningEntity.checkCorrectness(inputWord.getText().toUpperCase())) {
             learningRate.increasePoints();
             changeCorrect(Integer.toString(learningRate.getScore()));
             inputWord.setStyle("-fx-control-inner-background: green");
+
         }
         else {
             inputWord.setStyle("-fx-control-inner-background: red");
 
         }
-
+        okButton.setDisable(true);
     }
 
     @FXML
@@ -52,6 +56,7 @@ public class LearningWindowController {
             inputWord.clear();
             inputWord.setStyle("-fx-control-inner-background: white");
             setRemainsWordsAmount(learningEntity.getRemainAmount(), learningEntity.getWordAmount());
+            okButton.setDisable(false);
         }
         else {
             quitLearning();
