@@ -1,13 +1,13 @@
 package project.learningEntity;
 
-import project.checker.WordNativeChecker;
+import project.checker.WordNativeValidator;
 import project.models.LearningUnit;
 
 public class LearningEntityFromForeign extends LearningEntity {
 
     public LearningEntityFromForeign(LearningUnit learningUnit) {
         super(learningUnit);
-        wordChecker = new WordNativeChecker();
+        wordValidator = new WordNativeValidator();
     }
 
     @Override

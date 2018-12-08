@@ -2,7 +2,7 @@ package project.data;
 
 public class DataCSVLineValidator implements DataLineValidator {
 
-    public boolean validLine(String line) {
+    public boolean isDataValid(String line) {
         if(line.isEmpty())
             return false;
         String [] array = line.split(",");

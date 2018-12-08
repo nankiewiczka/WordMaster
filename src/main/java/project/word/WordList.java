@@ -1,7 +1,5 @@
 package project.word;
 
-import project.word.Word;
-
 import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
@@ -25,7 +23,7 @@ public class WordList {
         return wordsList;
     }
 
-    public int getAmount() {
+    public int getWordNumber() {
         return this.wordsList.size();
     }
 

@@ -19,7 +19,7 @@ public class DataCSVProvider implements DataProvider {
         DataLineValidator validator = new DataCSVLineValidator();
         try {
             Files.lines(Paths.get(fileName)).forEach(s -> {
-            if(validator.validLine(s)) {
+            if(validator.isDataValid(s)) {
                 String [] arr = s.split(",");
                 wordToUpperCase(arr);
                 wordTrim(arr);

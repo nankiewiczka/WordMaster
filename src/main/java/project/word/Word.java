@@ -1,16 +1,16 @@
 package project.word;
 
 public class Word {
-    private String polishWord;
+    private String nativeWord;
     private String foreignWord;
 
-    public Word(String polishWord, String foreignWord) {
-        this.polishWord = polishWord;
+    public Word(String nativeWord, String foreignWord) {
+        this.nativeWord = nativeWord;
         this.foreignWord = foreignWord;
     }
 
     public String getNativeWord() {
-        return polishWord;
+        return nativeWord;
     }
 
     public String getForeignWord() {

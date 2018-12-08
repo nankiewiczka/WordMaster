@@ -9,31 +9,31 @@ class DataCSVLineValidatorTest {
     @Test
     void shouldReturnTrueWhenOneComma() {
         DataCSVLineValidator validator = new DataCSVLineValidator();
-        assertTrue(validator.validLine("a,bc"));
+        assertTrue(validator.isDataValid("a,bc"));
     }
 
     @Test
     void shouldReturnFalseWhenMoreThanOneComma() {
         DataCSVLineValidator validator = new DataCSVLineValidator();
-        assertFalse(validator.validLine("a,b,c"));
+        assertFalse(validator.isDataValid("a,b,c"));
     }
 
     @Test
     void shouldReturnFalseWhenZeroComma() {
         DataCSVLineValidator validator = new DataCSVLineValidator();
-        assertFalse(validator.validLine("abc"));
+        assertFalse(validator.isDataValid("abc"));
     }
 
     @Test
     void shouldReturnFalseWhenOneCommaAndAnyWords() {
         DataCSVLineValidator validator = new DataCSVLineValidator();
-        assertFalse(validator.validLine(","));
+        assertFalse(validator.isDataValid(","));
     }
 
     @Test
     void shouldReturnFalseWhenEmptyLine() {
         DataCSVLineValidator validator = new DataCSVLineValidator();
-        assertFalse(validator.validLine(""));
+        assertFalse(validator.isDataValid(""));
     }
 
 }

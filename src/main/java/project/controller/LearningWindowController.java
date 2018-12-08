@@ -10,7 +10,7 @@ import java.util.Optional;
 public class LearningWindowController {
 
     private LearningEntity learningEntity;
-    private LearningRate learningRate;
+    private LearningStatistic learningStatistic;
 
     @FXML
     private Label titleForCorrectAnswers;
@@ -35,11 +35,10 @@ public class LearningWindowController {
 
     @FXML
     public void confirmWord() {
-        if(learningEntity.checkCorrectness(inputWord.getText().toUpperCase())) {
-            learningRate.increasePoints();
-            changeCorrect(Integer.toString(learningRate.getScore()));
+        if(learningEntity.validateUserInput(inputWord.getText().toUpperCase())) {
+            learningStatistic.increasePoints();
+            changeCorrect(Integer.toString(learningStatistic.getScore()));
             inputWord.setStyle("-fx-control-inner-background: green");
-
         }
         else {
             inputWord.setStyle("-fx-control-inner-background: red");
@@ -59,7 +58,7 @@ public class LearningWindowController {
             changeWordForGuess(wordForLabel);
             inputWord.clear();
             inputWord.setStyle("-fx-control-inner-background: white");
-            setRemainsWordsAmount(learningEntity.getRemainAmount(), learningEntity.getWordAmount());
+            setRemainsWordsAmount(learningEntity.getRemainWordsNumber(), learningEntity.getAllWordsNumber());
             okButton.setDisable(false);
             inputWord.setEditable(true);
 
@@ -84,8 +83,8 @@ public class LearningWindowController {
         Alert alert = new Alert(Alert.AlertType.NONE, "", ButtonType.OK, ButtonType.CLOSE);
         alert.setTitle("Test finished");
         alert.setHeaderText("You finished test.");
-        alert.setContentText("You score is: " + learningRate.getScore() + "/"
-                + learningRate.getAvailablePoints() + "." +
+        alert.setContentText("You score is: " + learningStatistic.getScore() + "/"
+                + learningStatistic.getAvailablePoints() + "." +
                 "\n Do you want to try again?");
         Optional<ButtonType> result = alert.showAndWait();
 
@@ -101,8 +100,8 @@ public class LearningWindowController {
         this.learningEntity = learningEntity;
     }
 
-    public void setLearningRate(int availablePoints) {
-        this.learningRate = new LearningRate(availablePoints);
+    public void setLearningStatistic(int availablePoints) {
+        this.learningStatistic = new LearningStatistic(availablePoints);
     }
 
     public void setWordToGuess(String word) {

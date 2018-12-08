@@ -1,10 +1,10 @@
 package project.models;
 
-public class LearningRate {
+public class LearningStatistic {
     private final int availablePoints;
     private int score;
 
-    public LearningRate(int availablePoints) {
+    public LearningStatistic(int availablePoints) {
         this.availablePoints = availablePoints;
         this.score = 0;
     }

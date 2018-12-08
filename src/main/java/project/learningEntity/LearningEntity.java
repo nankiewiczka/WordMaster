@@ -1,6 +1,6 @@
 package project.learningEntity;
 
-import project.checker.WordChecker;
+import project.checker.WordValidator;
 import project.models.LearningList;
 import project.models.LearningUnit;
 import project.word.Word;
@@ -8,7 +8,7 @@ import project.word.Word;
 public abstract class LearningEntity {
     protected LearningUnit learningUnit;
     protected LearningList learningList;
-    protected WordChecker wordChecker;
+    protected WordValidator wordValidator;
     protected Word word;
 
     public LearningEntity(LearningUnit learningUnit) {
@@ -18,21 +18,20 @@ public abstract class LearningEntity {
     }
 
     public abstract String getWordForLabel();
-    public boolean checkCorrectness(String input) {
-        return wordChecker.checkCorrectness(word, input);
-    }
-    public int getWordAmount() {
-        return learningUnit.getWordsAmount();
+
+    public boolean validateUserInput(String input) {
+        return wordValidator.validateWord(word, input);
     }
 
-    public int getRemainAmount() {
-        return learningList.remainsAmount();
+    public int getAllWordsNumber() {
+        return learningUnit.getWordNumber();
+    }
+
+    public int getRemainWordsNumber() {
+        return learningList.getRemainWordNumber();
     }
 
     public LearningUnit getLearningUnit() {
         return learningUnit;
     }
-
-
-
 }

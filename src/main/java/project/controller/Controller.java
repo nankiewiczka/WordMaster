@@ -22,8 +22,8 @@ public class Controller {
             LearningUnit learningUnit = new LearningUnit(new DataCSVProvider(selectedFile.getAbsolutePath()).getData(), selectedFile.getAbsolutePath());
             controller.setImportedFileName(learningUnit.getFileName());
             controller.setLearningUnit(learningUnit);
-            controller.setImportedWordAmount(Integer.toString(learningUnit.getWordsAmount()));
-            if(learningUnit.getWordsAmount() == 0)
+            controller.setImportedWordAmount(Integer.toString(learningUnit.getWordNumber()));
+            if(learningUnit.getWordNumber() == 0)
                 controller.setInvisible();
             Stage stage = Main.getMainStage();
             stage.setScene(new Scene(root));
@@ -40,8 +40,8 @@ public class Controller {
             StartLearningWindowController controller = fxmlLoader.getController();
             controller.setImportedFileName(learningUnit.getFileName());
             controller.setLearningUnit(learningUnit);
-            controller.setImportedWordAmount(Integer.toString(learningUnit.getWordsAmount()));
-            if(learningUnit.getWordsAmount() == 0)
+            controller.setImportedWordAmount(Integer.toString(learningUnit.getWordNumber()));
+            if(learningUnit.getWordNumber() == 0)
                 controller.setInvisible();
             Stage stage = Main.getMainStage();
             stage.setScene(new Scene(root));
@@ -58,8 +58,8 @@ public class Controller {
             LearningWindowController controller = fxmlLoader.getController();
             controller.setLearningEntity(learningEntity);
             controller.setWordToGuess(learningEntity.getWordForLabel());
-            controller.setLearningRate(learningEntity.getWordAmount());
-            controller.setRemainsWordsAmount(1, learningEntity.getWordAmount());
+            controller.setLearningStatistic(learningEntity.getAllWordsNumber());
+            controller.setRemainsWordsAmount(1, learningEntity.getAllWordsNumber());
             Stage stage = Main.getMainStage();
             stage.setScene(new Scene(root));
             stage.show();

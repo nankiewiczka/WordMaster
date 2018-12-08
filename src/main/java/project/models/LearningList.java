@@ -9,7 +9,7 @@ public class LearningList {
 
     public LearningList(WordList wordList) {
         this.wordList = wordList;
-        this.index = wordList.getAmount();
+        this.index = wordList.getWordNumber();
     }
 
     public Word getNextWord() {
@@ -17,8 +17,8 @@ public class LearningList {
         return wordList.getWord(index);
     }
 
-    public int remainsAmount() {
-        return wordList.getAmount() - index;
+    public int getRemainWordNumber() {
+        return wordList.getWordNumber() - index;
     }
 
     public void shuffleLearningList() {

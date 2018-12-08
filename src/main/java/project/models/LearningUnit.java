@@ -11,8 +11,8 @@ public class LearningUnit {
         this.fileName = fileName;
     }
 
-    public int getWordsAmount() {
-        return wordList.getAmount();
+    public int getWordNumber() {
+        return wordList.getWordNumber();
     }
 
     public String getFileName() {

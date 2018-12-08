@@ -27,7 +27,7 @@ class WordListTest {
     @Test
     void shouldReturnZeroSizeWhenNotAddAnyWord() {
         WordList wordList = new WordList();
-        assertEquals(0, wordList.getAmount());
+        assertEquals(0, wordList.getWordNumber());
     }
 
     @Test
@@ -35,7 +35,7 @@ class WordListTest {
         WordList wordList = new WordList();
         Word word = new Word("a", "b");
         wordList.addWord(word);
-        assertEquals(1, wordList.getAmount());
+        assertEquals(1, wordList.getWordNumber());
     }
 
 }
