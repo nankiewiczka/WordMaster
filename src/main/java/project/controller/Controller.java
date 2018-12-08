@@ -23,6 +23,8 @@ public class Controller {
             controller.setImportedFileName(learningUnit.getFileName());
             controller.setLearningUnit(learningUnit);
             controller.setImportedWordAmount(Integer.toString(learningUnit.getWordsAmount()));
+            if(learningUnit.getWordsAmount() == 0)
+                controller.setInvisible();
             Stage stage = Main.getMainStage();
             stage.setScene(new Scene(root));
             stage.show();
@@ -39,6 +41,8 @@ public class Controller {
             controller.setImportedFileName(learningUnit.getFileName());
             controller.setLearningUnit(learningUnit);
             controller.setImportedWordAmount(Integer.toString(learningUnit.getWordsAmount()));
+            if(learningUnit.getWordsAmount() == 0)
+                controller.setInvisible();
             Stage stage = Main.getMainStage();
             stage.setScene(new Scene(root));
             stage.show();

@@ -53,7 +53,6 @@ public class LearningWindowController {
         if(!okButton.isDisable()) {
             confirmWord();
         }
-
         String wordForLabel = learningEntity.getWordForLabel();
         if(wordForLabel != null) {
             changeWordForGuess(wordForLabel);

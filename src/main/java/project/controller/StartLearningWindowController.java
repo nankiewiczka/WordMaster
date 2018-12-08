@@ -3,6 +3,7 @@ package project.controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import project.Main;
@@ -29,6 +30,9 @@ public class StartLearningWindowController {
 
     @FXML
     private ChoiceBox selectLanguage;
+
+    @FXML
+    private Button startButton;
 
     @FXML
     private void initialize() {
@@ -66,4 +70,10 @@ public class StartLearningWindowController {
     public void setImportedWordAmount(String wordAmount) {
         importedWordAmount.textProperty().setValue(wordAmount);
     }
+
+    public void setInvisible() {
+        startButton.setVisible(false);
+        selectLanguage.setVisible(false);
+    }
+
 }
