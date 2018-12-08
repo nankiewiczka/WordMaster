@@ -32,11 +32,17 @@ public class LearningWindowController {
 
     @FXML
     public void confirmWord() {
-        if(learningEntity.checkCorrectness(inputWord.getPromptText())) {
+        if(learningEntity.checkCorrectness(inputWord.getText())) {
             learningRate.increasePoints();
             changeCorrect(Integer.toString(learningRate.getScore()));
-            changeRemain(Integer.toString(learningEntity.getRemainAmount()));
+            inputWord.setStyle("-fx-control-inner-background: green");
         }
+        else {
+            inputWord.setStyle("-fx-control-inner-background: red");
+
+        }
+        changeRemain(Integer.toString(learningEntity.getRemainAmount()));
+
     }
 
     @FXML
@@ -44,6 +50,7 @@ public class LearningWindowController {
         String wordForLabel = learningEntity.getWordForLabel();
         if(wordForLabel != null) {
             changeWordForGuess(wordForLabel);
+            inputWord.clear();
         }
         else {
             quitLearning();
