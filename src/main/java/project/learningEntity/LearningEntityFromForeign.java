@@ -1,20 +1,20 @@
 package project.learningEntity;
 
-import project.checker.WordForeignChecker;
+import project.checker.WordNativeChecker;
 import project.models.LearningUnit;
 
-public class LearningEntityFromNative extends LearningEntity {
+public class LearningEntityFromForeign extends LearningEntity {
 
-    public LearningEntityFromNative(LearningUnit learningUnit) {
+    public LearningEntityFromForeign(LearningUnit learningUnit) {
         super(learningUnit);
-        wordChecker = new WordForeignChecker();
+        wordChecker = new WordNativeChecker();
     }
 
     @Override
     public String getWordForLabel() {
         if(learningList.isNextWord()) {
             word = learningList.getNextWord();
-            return word.getNativeWord();
+            return word.getForeignWord();
         }
         else
             return null;

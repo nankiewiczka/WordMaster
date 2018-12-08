@@ -10,7 +10,7 @@ class WordTest {
     @Test
     void shouldPolishWordBeTheSameAsInConstructor() {
         Word word = new Word("aaa", "bbb");
-        assertEquals(word.getPolishWord(), "aaa");
+        assertEquals(word.getNativeWord(), "aaa");
     }
 
     @Test
@@ -22,7 +22,7 @@ class WordTest {
     @Test
     void shouldPolishWordBeEmpty() {
         Word word = new Word("", "bbb");
-        assertTrue(word.getPolishWord().isEmpty());
+        assertTrue(word.getNativeWord().isEmpty());
     }
 
 }

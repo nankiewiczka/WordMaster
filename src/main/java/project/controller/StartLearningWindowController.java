@@ -8,6 +8,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import project.Main;
 import project.learningEntity.LearningEntity;
+import project.learningEntity.LearningEntityFromForeign;
 import project.learningEntity.LearningEntityFromNative;
 import project.models.LearningUnit;
 
@@ -56,7 +57,7 @@ public class StartLearningWindowController {
         if(selectLanguage.getValue().toString().equals("polish-foreign"))
             return new LearningEntityFromNative(learningUnit);
         else
-            return new LearningEntityFromNative(learningUnit); //TODO poprawić
+            return new LearningEntityFromForeign(learningUnit);
     }
 
     public void setImportedFileName(String fileName) {

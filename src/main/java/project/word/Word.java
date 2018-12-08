@@ -9,7 +9,7 @@ public class Word {
         this.foreignWord = foreignWord;
     }
 
-    public String getPolishWord() {
+    public String getNativeWord() {
         return polishWord;
     }
 
