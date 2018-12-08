@@ -1,4 +1,4 @@
-package project.model;
+package project.word;
 
 public class Word {
     private String polishWord;

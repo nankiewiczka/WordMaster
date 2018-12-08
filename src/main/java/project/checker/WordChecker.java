@@ -1,6 +1,6 @@
 package project.checker;
 
-import project.model.Word;
+import project.word.Word;
 
 public interface WordChecker {
     boolean checkCorrectness(Word word, String input);

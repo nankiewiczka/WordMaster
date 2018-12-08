@@ -1,4 +1,7 @@
-package project.model;
+package project.models;
+
+import project.word.Word;
+import project.word.WordList;
 
 public class LearningList {
     private WordList wordList;

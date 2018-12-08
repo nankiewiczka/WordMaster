@@ -6,8 +6,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import project.Main;
 import project.data.DataCSVProvider;
-import project.model.LearningEntity;
-import project.model.LearningUnit;
+import project.learningEntity.LearningEntity;
+import project.models.LearningUnit;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,6 +1,6 @@
 package project.data;
 
-import project.model.WordList;
+import project.word.WordList;
 
 public interface DataProvider {
     WordList getData();

@@ -1,7 +1,7 @@
 package project.data;
 
-import project.model.Word;
-import project.model.WordList;
+import project.word.Word;
+import project.word.WordList;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;

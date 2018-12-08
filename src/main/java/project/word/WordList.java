@@ -1,6 +1,7 @@
-package project.model;
+package project.word;
 
-import java.util.Collection;
+import project.word.Word;
+
 import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
@@ -20,7 +21,6 @@ public class WordList {
         return this.wordsList.get(index);
     }
 
-
     public List<Word> getWordsList() {
         return wordsList;
     }
@@ -32,13 +32,5 @@ public class WordList {
     public void shuffleWordList() {
         Collections.shuffle(this.wordsList);
     }
-
-//    public WordList cloneWordList() {
-//        WordList wordListToReturn = new WordList();
-//        for(Word w: wordsList) {
-//            wordListToReturn.addWord(w);
-//        }
-//        return wordListToReturn;
-//    }
 
 }

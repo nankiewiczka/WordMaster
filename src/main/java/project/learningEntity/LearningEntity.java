@@ -1,6 +1,9 @@
-package project.model;
+package project.learningEntity;
 
 import project.checker.WordChecker;
+import project.models.LearningList;
+import project.models.LearningUnit;
+import project.word.Word;
 
 public abstract class LearningEntity {
     protected LearningUnit learningUnit;

@@ -1,6 +1,8 @@
-package project.model;
+package project.learningEntity;
 
 import project.checker.WordForeignChecker;
+import project.models.LearningList;
+import project.models.LearningUnit;
 
 public class LearningEntityFromNative extends LearningEntity {
 

@@ -1,4 +1,4 @@
-package project.model;
+package project.models;
 
 public class LearningRate {
     private final int availablePoints;

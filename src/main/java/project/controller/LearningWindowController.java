@@ -3,7 +3,8 @@ package project.controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import project.Main;
-import project.model.*;
+import project.learningEntity.LearningEntity;
+import project.models.*;
 import java.util.Optional;
 
 public class LearningWindowController {

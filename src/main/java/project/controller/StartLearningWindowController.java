@@ -6,9 +6,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import project.Main;
-import project.model.LearningEntity;
-import project.model.LearningEntityFromNative;
-import project.model.LearningUnit;
+import project.learningEntity.LearningEntity;
+import project.learningEntity.LearningEntityFromNative;
+import project.models.LearningUnit;
 
 public class StartLearningWindowController {
 
