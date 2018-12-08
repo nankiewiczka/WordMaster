@@ -50,6 +50,10 @@ public class LearningWindowController {
 
     @FXML
     public void switchNextWord() {
+        if(!okButton.isDisable()) {
+            confirmWord();
+        }
+
         String wordForLabel = learningEntity.getWordForLabel();
         if(wordForLabel != null) {
             changeWordForGuess(wordForLabel);
