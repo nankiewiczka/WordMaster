@@ -46,6 +46,7 @@ public class LearningWindowController {
 
         }
         okButton.setDisable(true);
+        inputWord.setEditable(false);
     }
 
     @FXML
@@ -60,6 +61,8 @@ public class LearningWindowController {
             inputWord.setStyle("-fx-control-inner-background: white");
             setRemainsWordsAmount(learningEntity.getRemainAmount(), learningEntity.getWordAmount());
             okButton.setDisable(false);
+            inputWord.setEditable(true);
+
         }
         else {
             quitLearning();
