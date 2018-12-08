@@ -55,7 +55,7 @@ public class Controller {
             controller.setLearningEntity(learningEntity);
             controller.setWordToGuess(learningEntity.getWordForLabel());
             controller.setLearningRate(learningEntity.getWordAmount());
-            controller.setRemainsWordsAmount("0/"+Integer.toString(learningEntity.getWordAmount()));
+            controller.setRemainsWordsAmount(1, learningEntity.getWordAmount());
             Stage stage = Main.getMainStage();
             stage.setScene(new Scene(root));
             stage.show();

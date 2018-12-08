@@ -17,9 +17,11 @@ public abstract class LearningEntity {
     public int getWordAmount() {
         return learningUnit.getWordsAmount();
     }
+
     public int getRemainAmount() {
         return learningList.remainsAmount();
     }
+
     public LearningUnit getLearningUnit() {
         return learningUnit;
     }

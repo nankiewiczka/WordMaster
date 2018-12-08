@@ -18,7 +18,7 @@ public class LearningList {
     }
 
     public int remainsAmount() {
-        return index;
+        return wordList.getAmount() - index;
     }
 
     public void shuffleLearningList() {

@@ -41,7 +41,6 @@ public class LearningWindowController {
             inputWord.setStyle("-fx-control-inner-background: red");
 
         }
-        changeRemain(Integer.toString(learningEntity.getRemainAmount()));
 
     }
 
@@ -51,6 +50,8 @@ public class LearningWindowController {
         if(wordForLabel != null) {
             changeWordForGuess(wordForLabel);
             inputWord.clear();
+            inputWord.setStyle("-fx-control-inner-background: white");
+            setRemainsWordsAmount(learningEntity.getRemainAmount(), learningEntity.getWordAmount());
         }
         else {
             quitLearning();
@@ -97,8 +98,8 @@ public class LearningWindowController {
         wordToGuess.textProperty().setValue(word);
     }
 
-    public void setRemainsWordsAmount(String remainAmount) {
-        remainsWordsAmount.textProperty().setValue(remainAmount);
+    public void setRemainsWordsAmount(int actualNumber, int remainAmount) {
+        remainsWordsAmount.textProperty().setValue(Integer.toString(actualNumber) + "/"+ Integer.toString(remainAmount));
     }
 
     private void changeWordForGuess(String wordForGuess) {
@@ -109,8 +110,5 @@ public class LearningWindowController {
         correctAnswers.textProperty().setValue(c);
     }
 
-    private void changeRemain(String r) {
-        remainsWordsAmount.textProperty().setValue(r);
-    }
 
 }
