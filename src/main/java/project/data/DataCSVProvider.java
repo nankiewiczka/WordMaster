@@ -15,13 +15,14 @@ public class DataCSVProvider implements DataProvider {
 
     @Override
     public WordList getData() {
-        //TODO dodć trim() i to Uppercase
         WordList wordList = new WordList();
         DataLineValidator validator = new DataCSVLineValidator();
         try {
             Files.lines(Paths.get(fileName)).forEach(s -> {
             if(validator.validLine(s)) {
                 String [] arr = s.split(",");
+                wordToUpperCase(arr);
+                wordTrim(arr);
                 wordList.addWord(new Word(arr[0], arr[1]));
             }
             });
@@ -30,4 +31,15 @@ public class DataCSVProvider implements DataProvider {
         }
         return wordList;
     }
+
+    private void wordToUpperCase(String [] arr) {
+        for(int i=0; i<arr.length; i++)
+            arr[i]= arr[i].toUpperCase();
+    }
+
+    private void wordTrim(String [] arr) {
+        for(int i=0; i<arr.length; i++)
+            arr[i]= arr[i].trim();
+    }
+
 }
