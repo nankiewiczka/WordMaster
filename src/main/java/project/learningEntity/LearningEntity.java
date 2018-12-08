@@ -10,6 +10,13 @@ public abstract class LearningEntity {
     protected LearningList learningList;
     protected WordChecker wordChecker;
     protected Word word;
+
+    public LearningEntity(LearningUnit learningUnit) {
+        this.learningUnit = learningUnit;
+        this.learningList = new LearningList(learningUnit.getWordList());
+        this.learningList.shuffleLearningList();
+    }
+
     public abstract String getWordForLabel();
     public boolean checkCorrectness(String input) {
         return wordChecker.checkCorrectness(word, input);

@@ -1,15 +1,12 @@
 package project.learningEntity;
 
 import project.checker.WordForeignChecker;
-import project.models.LearningList;
 import project.models.LearningUnit;
 
 public class LearningEntityFromNative extends LearningEntity {
 
     public LearningEntityFromNative(LearningUnit learningUnit) {
-        this.learningUnit = learningUnit;
-        this.learningList = new LearningList(learningUnit.getWordList());
-        this.learningList.shuffleLearningList();
+        super(learningUnit);
         wordChecker = new WordForeignChecker();
     }
 
