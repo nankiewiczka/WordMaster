@@ -1,4 +1,4 @@
-package project.data;
+package project.dataProvider;
 
 import project.word.WordList;
 

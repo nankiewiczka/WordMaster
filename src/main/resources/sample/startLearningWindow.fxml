@@ -6,29 +6,36 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #80bfff;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controller.StartLearningWindowController">
+<AnchorPane prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #80bfff;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controllers.StartLearningWindowController">
 
     <children>
         <Button fx:id="startButton" layoutX="232.0" layoutY="159.0" mnemonicParsing="false" onAction="#startLearning" prefHeight="28.0" prefWidth="142.0" style="-fx-background-color: #cce6ff;" text="Start test">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font name="Droid Sans Bold" size="14.0" />
          </font></Button>
         <Button fx:id="endButton" layoutX="232.0" layoutY="212.0" mnemonicParsing="false" onAction="#endLearning" prefHeight="28.0" prefWidth="142.0" style="-fx-background-color: #cce6ff;" text="Quit">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font name="Droid Sans Bold" size="14.0" />
          </font></Button>
         <ChoiceBox fx:id="selectLanguage" layoutX="34.0" layoutY="160.0" prefHeight="28.0" prefWidth="150.0" style="-fx-background-color: #cce6ff;">
         </ChoiceBox>
 
         <Label fx:id="amountLabel" layoutX="34.0" layoutY="101.0" text="Label">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font name="Droid Sans Bold" size="14.0" />
          </font></Label>
         <Label fx:id="titleLabel" layoutX="34.0" layoutY="38.0" text="Label">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font name="Droid Sans Bold" size="14.0" />
          </font></Label>
-      <Label fx:id="importedFileName" layoutX="34.0" layoutY="72.0" text="Label" />
-      <Label fx:id="importedWordAmount" layoutX="285.0" layoutY="102.0" text="Label" />
+      <Label fx:id="importedFileName" layoutX="34.0" layoutY="72.0" text="Label">
+         <font>
+            <Font name="Droid Sans" size="13.0" />
+         </font></Label>
+      <Label fx:id="importedWordAmount" layoutX="285.0" layoutY="102.0" text="Label">
+        <font>
+            <Font name="Droid Sans" size="13.0" />
+        </font>
+        </Label>
     </children>
 </AnchorPane>

@@ -1,6 +1,7 @@
-package project.data;
+package project.dataProvider;
 
 import org.junit.jupiter.api.Test;
+import project.dataValidator.DataCSVLineValidator;
 
 import static org.junit.jupiter.api.Assertions.*;
 

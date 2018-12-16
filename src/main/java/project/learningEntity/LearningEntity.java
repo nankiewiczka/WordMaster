@@ -1,6 +1,6 @@
 package project.learningEntity;
 
-import project.checker.WordValidator;
+import project.wordValidator.WordValidator;
 import project.models.LearningList;
 import project.models.LearningUnit;
 import project.word.Word;

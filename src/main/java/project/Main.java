@@ -2,7 +2,7 @@ package project;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import project.controller.Controller;
+import project.controllers.Controller;
 
 public class Main extends Application {
 
@@ -26,3 +26,6 @@ public class Main extends Application {
     }
 
 }
+
+//TODO
+//unit test + code cleanup

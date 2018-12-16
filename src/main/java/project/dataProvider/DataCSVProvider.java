@@ -1,5 +1,7 @@
-package project.data;
+package project.dataProvider;
 
+import project.dataValidator.DataCSVLineValidator;
+import project.dataValidator.DataLineValidator;
 import project.word.Word;
 import project.word.WordList;
 import java.io.IOException;

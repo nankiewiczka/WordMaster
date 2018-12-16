@@ -1,6 +1,6 @@
 package project.learningEntity;
 
-import project.checker.WordForeignValidator;
+import project.wordValidator.WordForeignValidator;
 import project.models.LearningUnit;
 
 public class LearningEntityFromNative extends LearningEntity {

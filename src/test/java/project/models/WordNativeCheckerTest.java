@@ -1,7 +1,7 @@
 package project.models;
 
 import org.junit.jupiter.api.Test;
-import project.checker.WordNativeValidator;
+import project.wordValidator.WordNativeValidator;
 import project.word.Word;
 
 import static org.junit.jupiter.api.Assertions.*;

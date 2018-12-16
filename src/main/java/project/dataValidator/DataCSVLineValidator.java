@@ -1,4 +1,4 @@
-package project.data;
+package project.dataValidator;
 
 public class DataCSVLineValidator implements DataLineValidator {
 

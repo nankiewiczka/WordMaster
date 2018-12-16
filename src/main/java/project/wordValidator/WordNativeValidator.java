@@ -1,4 +1,4 @@
-package project.checker;
+package project.wordValidator;
 
 import project.word.Word;
 

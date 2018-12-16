@@ -1,11 +1,11 @@
-package project.controller;
+package project.controllers;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import project.Main;
-import project.data.DataCSVProvider;
+import project.dataProvider.DataCSVProvider;
 import project.learningEntity.LearningEntity;
 import project.models.LearningUnit;
 
