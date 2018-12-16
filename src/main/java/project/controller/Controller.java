@@ -19,7 +19,7 @@ public class Controller {
             FXMLLoader fxmlLoader = new FXMLLoader(Controller.class.getResource("/sample/startLearningWindow.fxml"));
             Parent root = fxmlLoader.load();
             StartLearningWindowController controller = fxmlLoader.getController();
-            LearningUnit learningUnit = new LearningUnit(new DataCSVProvider(selectedFile.getAbsolutePath()).getData(), selectedFile.getAbsolutePath());
+            LearningUnit learningUnit = new LearningUnit(new DataCSVProvider(selectedFile.getAbsolutePath()).getData(), selectedFile.getName());
             controller.setImportedFileName(learningUnit.getFileName());
             controller.setLearningUnit(learningUnit);
             controller.setImportedWordAmount(Integer.toString(learningUnit.getWordNumber()));
