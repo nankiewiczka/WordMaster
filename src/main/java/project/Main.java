@@ -28,4 +28,4 @@ public class Main extends Application {
 }
 
 //TODO
-//unit test + code cleanup
+//unit test

@@ -35,7 +35,7 @@ public class LearningWindowController {
 
     @FXML
     public void confirmWord() {
-        if(learningEntity.validateUserInput(inputWord.getText().toUpperCase())) {
+        if(learningEntity.isUserInputValid(inputWord.getText().toUpperCase())) {
             learningStatistic.increasePoints();
             changeCorrect(Integer.toString(learningStatistic.getScore()));
             inputWord.setStyle("-fx-control-inner-background: green");
@@ -116,8 +116,8 @@ public class LearningWindowController {
         wordToGuess.textProperty().setValue(wordForGuess);
     }
 
-    private void changeCorrect(String c) {
-        correctAnswers.textProperty().setValue(c);
+    private void changeCorrect(String correct) {
+        correctAnswers.textProperty().setValue(correct);
     }
 
 

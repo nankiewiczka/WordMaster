@@ -11,7 +11,7 @@ public abstract class LearningEntity {
     protected WordValidator wordValidator;
     protected Word word;
 
-    public LearningEntity(LearningUnit learningUnit) {
+    protected LearningEntity(LearningUnit learningUnit) {
         this.learningUnit = learningUnit;
         this.learningList = new LearningList(learningUnit.getWordList());
         this.learningList.shuffleLearningList();
@@ -19,7 +19,7 @@ public abstract class LearningEntity {
 
     public abstract String getWordForLabel();
 
-    public boolean validateUserInput(String input) {
+    public boolean isUserInputValid(String input) {
         return wordValidator.validateWord(word, input);
     }
 

@@ -1,11 +1,11 @@
 package project.models;
 
 public class LearningStatistic {
-    private final int availablePoints;
+    private final int AVAILABLE_POINTS;
     private int score;
 
     public LearningStatistic(int availablePoints) {
-        this.availablePoints = availablePoints;
+        this.AVAILABLE_POINTS = availablePoints;
         this.score = 0;
     }
 
@@ -14,7 +14,7 @@ public class LearningStatistic {
     }
 
     public int getAvailablePoints() {
-        return availablePoints;
+        return AVAILABLE_POINTS;
     }
 
     public int getScore() {
