@@ -10,15 +10,16 @@ import java.nio.file.Paths;
 
 public class DataCSVProvider implements DataProvider {
     private String fileName;
+    private DataLineValidator validator;
 
     public DataCSVProvider(String fileName) {
         this.fileName = fileName;
+        validator = new DataCSVLineValidator();
     }
 
     @Override
     public WordList getData() {
         WordList wordList = new WordList();
-        DataLineValidator validator = new DataCSVLineValidator();
         try {
             Files.lines(Paths.get(fileName)).forEach(s -> {
             if(validator.isDataValid(s)) {
