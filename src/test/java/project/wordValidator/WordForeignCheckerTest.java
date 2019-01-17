@@ -1,7 +1,6 @@
-package project.models;
+package project.wordValidator;
 
 import org.junit.jupiter.api.Test;
-import project.wordValidator.WordForeignValidator;
 import project.word.Word;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,8 +9,8 @@ class WordForeignCheckerTest {
 
     @Test
     void shouldReturnTrueWhenInputAsForeign() {
-        WordForeignValidator wordForeignChecker = new WordForeignValidator();
-        assertTrue(wordForeignChecker.validateWord(new Word("aaa", "bbb"), "bbb"));
+        WordForeignValidator wordForeignValidator = new WordForeignValidator();
+        assertTrue(wordForeignValidator.validateWord(new Word("aaa", "bbb"), "bbb"));
     }
 
     @Test

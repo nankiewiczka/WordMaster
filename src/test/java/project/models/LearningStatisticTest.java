@@ -20,7 +20,7 @@ class LearningStatisticTest {
     }
 
     @Test
-    void shouldScoreBeOneWhenAddThreePoint() {
+    void shouldScoreBeThreeWhenAddThreePoint() {
         LearningStatistic learningStatistic = new LearningStatistic(10);
         learningStatistic.increasePoints();
         learningStatistic.increasePoints();
@@ -29,7 +29,7 @@ class LearningStatisticTest {
     }
 
     @Test
-    void shouldAvailablePointsBeAsSentInConstructor() {
+    void shouldAvailablePointsBeAsSendInConstructor() {
         LearningStatistic learningStatistic = new LearningStatistic(10);
         learningStatistic.increasePoints();
         assertEquals(10, learningStatistic.getAvailablePoints());
