@@ -1,7 +1,6 @@
-package project.models;
+package project.word;
 
 import org.junit.jupiter.api.Test;
-import project.word.Word;
 
 import static org.junit.jupiter.api.Assertions.*;
 

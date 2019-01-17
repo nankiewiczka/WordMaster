@@ -26,6 +26,3 @@ public class Main extends Application {
     }
 
 }
-
-//TODO
-//unit test
